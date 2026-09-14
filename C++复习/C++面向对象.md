@@ -79,3 +79,4 @@ final修饰，class MyClass final。在C++11前需要用私有构造函数+虚�
 
 this指针
 this指针本质是指针常量，指向不能变，指向的对象可以变，在const成员函数中，this变为const T* const，指向和指向对象都不能变
+如果需要在对象内部获取指向自身的shared_ptr，不能直接shared_ptr<T>(this)，必须继承std::enable_shared_from_this<T>，然后调用shared_from_this();
