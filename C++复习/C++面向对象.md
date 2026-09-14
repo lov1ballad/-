@@ -7,6 +7,14 @@ C++的构造函数主要有六种：默认构造、参数化构造、拷贝构�
 2.参数化构造，不会自动生成，用户自定义，带参创建对象；
 
 3.拷贝构造函数，className(const ClassName&)，未定义时自动生成（浅拷贝）。使用已有对象初始化新对象（可分为深拷贝和浅拷贝）；
+核心作用实现对象复制，并防止浅拷贝导致的内存错误，参数必须是同类对象的引用（通常使用const修饰）。
+
+| ClassName(const ClassName& other);              | 最常见形式        |
+| ----------------------------------------------- | ------------ |
+| **ClassName(ClassName& other);**                | **非const版本** |
+| **ClassName(volatile ClassName& other);**       |              |
+| **ClassName(const volatile ClassName& other);** |              |
+参数必须是引用，不能值传递，否则会无限递归调用导致栈溢出。
 
 4.移动构造，className(ClassName&&)，未定义拷贝/移动操作且未定义析构时自动生成，窃取临时对象资源，避免深拷贝；
 
