@@ -129,6 +129,9 @@ public:
 Singleton* Singleton::instance = nullptr;
 std::mutex SIngleton::mtx;
 ```
+第一次检查：如果instance已经不为空，说明已经创建过了，直接返回即可，不需要加锁；
+
+
 4.Magic Static：函数内的局部static变量，C++11标准规定其初始化必须是线程安全的。代码只需一行，没有手动锁没有指针、没有内存泄漏。
 ```
 class Singleton
