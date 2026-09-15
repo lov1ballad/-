@@ -91,3 +91,18 @@ this指针本质是指针常量，指向不能变，指向的对象可以变，�
 3.双检锁：在懒汉模式基础上加锁。第一次检查避免每次都加锁，加锁后第二次检查避免重复创建
 
 4.Magic Static：函数内的局部static变量，C++11标准规定其初始化必须是线程安全的。代码只需一行，没有手动锁没有指针、没有内存泄漏。
+```
+class Singleton
+{
+	private:
+			Singleton(){}
+			 Singleton(const Singleton&) = delete;
+			 Singleton& operator=(const Singletonm&) = delete;
+	 public:
+		 static Singleton& getInstance()
+		 {
+			 static Singleton instance；//C++11保证局部静态变量初始化线程安全
+			 return instance;
+		 }
+}
+```
