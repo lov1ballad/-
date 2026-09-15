@@ -100,6 +100,7 @@ public:
 //在main()之前初始化
 Singleton Singleton::instance;
 ```
+两个单例A和B，如果在单例A的构造函数里用到了单例B，而B还没初始化（不同编译单元的static变量初始化顺序未定义），就会崩溃。而Magic Static天然避免了这个问题，。谁先被调用谁先初始化。
 
 2.懒汉模式：第一次调用getInstance时才创建，解决了资源浪费问题，但多线程下两个线程同时判断intance==nullptr会创建两个实例，线程不安全；
 代码同4Magic Static
