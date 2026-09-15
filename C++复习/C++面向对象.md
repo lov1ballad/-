@@ -110,17 +110,22 @@ class Singleton
 {
 privtae:
 	static std::mutex mtx;
-	 static Singleton* instance;
+	 static std::atomic<Singleton*> instance;
 	 Singleton(){}
 public:
 		static Singleton* getInstance()
 		 {
-			 if（nullptr == instance)//第一次检查，避免每次都加锁
+		 Singleton* tmp = instance.load(std::memory_order_acquire);//使用内存序
+			 if（tmp == nullptr)//第一次检查，避免每次都加锁
 			 {
 				 std::lock_guard<std::mutex>lk(mtx);//加锁
-				 if(nullptr == instance)//第二次检查，确保至于偶一个线程创建
+				 tmp = instance.load(std::memory_order_relaxed);
+				 if(tmp == nullptr)//第二次检查，确保至于偶一个线程创建
 				 {
-					 instance = new Singleton();
+					 tmp = new Singleton();
+					 // 赋值：使用 memory_order_release
+					 // 确保 new 操作（包括构造函数）在赋值给 instance 之前全部完成
+					 instance.store(tmp, std::memory_order_release);
 				 }
 			 }
 			 return instance;
@@ -131,6 +136,8 @@ std::mutex SIngleton::mtx;
 ```
 第一次检查：如果instance已经不为空，说明已经创建过了，直接返回即可，不需要加锁；
 第二次检查原因：线程A检查instance == nullptr，结果为真，准备进入锁区域，此时线程A被操作系统挂起（时间片用完），线程B进来检查instance == nullptr也为真，进入锁区域，创建实例，释放锁，线程A此时恢复运行，由于之前已经通过第一次检查，于是再次进入锁区域，又会创建一个新实例，覆盖了线程B创建的实例（或会导致内存泄漏）。因此需要在进入锁后再次检查是否为空
+
+PS：这种场景在C++11之前还是不安全的，原因是 instance = new Singleton();操作编译器底层会分三个步骤；1.分配内存；2.调用构造函数；3.赋值指针。为了提高执行效率，可能会进行指令重排序，2和3步骤发生交换。为了防止重排序，使用atomic和内存序解决解决
 
 4.Magic Static：函数内的局部static变量，C++11标准规定其初始化必须是线程安全的。代码只需一行，没有手动锁没有指针、没有内存泄漏。
 ```
@@ -150,3 +157,8 @@ class Singleton
 ```
 C++11标准明确规定，局部静态变量的初始化过程是线程安全的。如果多个线程首次调用该函数，初始化操作会被正确序列化，只有一个线程会执行初始化，其他线程会等待。
 对于生命周期的管理，由于是静态局部变量，生命周期是整个程序运行期间。
+
+单例模式缺点：
+1.由于是全局状态，会导致单元测试困难，全局状态难隔离
+2.违反单一职责，既管业务又管自己生命周期
+3.适用场景：日志，配置管理
