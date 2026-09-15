@@ -105,7 +105,30 @@ Singleton Singleton::instance;
 代码同4Magic Static
 
 3.双检锁：在懒汉模式基础上加锁。第一次检查避免每次都加锁，加锁后第二次检查避免重复创建
-
+```
+class Singleton
+{
+privtae:
+	static std::mutex mtx;
+	 static Singleton* instance;
+	 Singleton(){}
+public:
+		static Singleton* getInstance()
+		 {
+			 if（nullptr == instance)//第一次检查，避免每次都加锁
+			 {
+				 std::lock_guard<std::mutex>lk(mtx);//加锁
+				 if(nullptr == instance)//第二次检查，确保至于偶一个线程创建
+				 {
+					 instance = new Singleton();
+				 }
+			 }
+			 return instance;
+		 }
+};
+Singleton* Singleton::instance = nullptr;
+std::mutex SIngleton::mtx;
+```
 4.Magic Static：函数内的局部static变量，C++11标准规定其初始化必须是线程安全的。代码只需一行，没有手动锁没有指针、没有内存泄漏。
 ```
 class Singleton
