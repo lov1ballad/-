@@ -8,16 +8,28 @@
 		end_of_storage指向已分配内存的末尾
 		end_of_storage-start=capacity()
 		连续内存，随机访问O(1)，尾部插入均摊O(1)，中间插入O(n);
+		![[Pasted image 20260916115907.png]]
 		容量capacity≥大小size，扩容时通常按照2倍（gcc是2倍，MSVC是1.5倍）增长，旧数据被拷贝（C++11移动）到新内存，释放旧内存，更新三个指针
 
 		容量管理接口：
 			1.reserve(n):预分配至少n个空间
 			2.resize(n)：改变元素个数
 			3.resize(n,val):改变元素个数，新增的用val填充
-			4.shrink_to_fit：请求capacity缩减到size
+			4.shrink_to_fit：请求capacity缩减到size，释放多余容量
 			5.clear：情况
-			上述所有涉及到扩容或降容都会导致迭代器失效
+			上述所有涉及到扩容或降容都会导致迭代器失效，需要重新获取迭代器
+		修改操作：
+			1.尾部操作：push_back、emplace_back（原地构造避免临时对象）、pop_back
+			2.中间插入/删除操作（O(n)需移动元素）：insert（pos，val）、
+			insert（pos、count、val）、insert（pos，{a,b,c}）
+			erase(pos)删除单个元素、erase(start,end)
+			erase返回指向下一个有效元素的迭代器，遍历删除时需要注意及时更新iterator
 	2.
+**总结：**
+	**需要频繁访问或者尾部插入/删除元素，选vector；**
+	**需要频繁头部插入/删除元素，选deque**
+	**节点很大且需要频繁中间增删元素，选list**
+	**编译期可以确定大小，选array**
 关联容器
 	map/multimap、set/multiset。底层红黑树，元素自动有序，操作Olog(n)
 
