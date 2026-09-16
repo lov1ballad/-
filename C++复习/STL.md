@@ -111,6 +111,10 @@ stack和queue默认用deque，核心原因为：
 allocator是STL中负责内存管理的组建，核心作用是把容器的数据结构逻辑和底层内存操作解耦。
 有四个职责：
 ## 1.分配原始内存allocate；
+allocate(n):分配能容纳n个对象的原始内存，不调用构造函数；
+
+
 ## 2.释放内存deallocate；
-##3.在已有内存上构造对象（construct）；
-4.析构对象但不释放内存（destroy）
+
+## 3.在已有内存上构造对象（construct）；
+## 4.析构对象但不释放内存（destroy）
