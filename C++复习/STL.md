@@ -79,7 +79,7 @@ list迭代器是双向迭代器，内部只封装了一个节点指针
 	5.从任意节点到其所有后代叶子结点的路径中，黑色节点数量相等
 	
 map/multimap、set/multiset。底层红黑树，元素自动有序，操作Olog(n)
-
+map：键值对，键唯一
 # 无序容器
 	unordered_map/unordered_mutimap、unordered_set/unordered_,utiset。底层哈希表，无序，平均O(1)
 
