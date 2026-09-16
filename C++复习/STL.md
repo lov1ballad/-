@@ -1,7 +1,7 @@
 # 顺序容器
 vector动态数组、deque分段数组、list双向链表、forward_list单向链表、array固定数组。元素按插入顺序排列。核心区别在于内存布局和操作效率：
 
-## 1.vector:本质是动态数组，内部通过三个指针管理
+## 1.vector 本质是动态数组，内部通过三个指针管理
 ![[Pasted image 20260916113753.png]]
 start指向已分配内存的起始位置；finish指向最后一个元素的下一个位置；
 finish-start=size（）
@@ -25,13 +25,31 @@ insert（pos、count、val）、insert（pos，{a,b,c}）
 erase(pos)删除单个元素、erase(start,end)
 erase返回指向下一个有效元素的迭代器，遍历删除时需要注意及时更新iterator
 
-## 2.分段数组deque
+## 2.分段数组 deque
 核心设计思想是分段连续存储，由两部分组成：
 ![[Pasted image 20260916121103.png]]
 **缓冲区buffer**：固定大小的连续内存块，真正存储数据；
 **中控器map**：一个指针数组，每个元素指向一个缓冲区的首地址
 ### deque迭代器
 包含四个指针：当前元素指针、当前缓存区的起始地址、当前缓冲区的末尾地址、指向map中当前缓冲区的指针
+
+## 3.list 本质带头节点的双向循环链表
+### 节点结构
+![[Pasted image 20260916122337.png]]
+每个节点额外占用前后两个指针，16个字节
+
+### list迭代器
+list迭代器是双向迭代器，内部只封装了一个节点指针
+![[Pasted image 20260916122621.png]]
+可以支持++、--等，但不支持+n、-n无随机访问能力
+
+### 核心成员函数
+1.splice——零拷贝节点转移
+	list独特功能，可以在O(1)时间内将一个节点的ownership转移到另一个list，不发生任何元素的拷贝或移动：
+	![[Pasted image 20260916122935.png]]
+2.merge——合并两个已排序链表
+	![[Pasted image 20260916123038.png]]
+3.
 
 **总结：**
 	**需要频繁访问或者尾部插入/删除元素，选vector；**
@@ -45,4 +63,11 @@ erase返回指向下一个有效元素的迭代器，遍历删除时需要注意
 	unordered_map/unordered_mutimap、unordered_set/unordered_,utiset。底层哈希表，无序，平均O(1)
 
 # 容器适配器
-	stack、queue、priority_quieue。不是独立容器，是对底层容器的接口封装。
+
+stack、queue、priority_quieue。不是独立容器，是对底层容器的接口封装。
+
+stack和queue默认用deque，核心原因为：
+1.不需要遍历，stack和queue都不提供迭代器；
+2.扩容开销小，deque扩容只需新增缓冲区，不搬移数据；
+3.两端操作效率高，queue需要push_back和popfront，deque两端都是O(1),vector头部操作是O(n);
+4.内存利用率高：相比list，deque不需要每个节点存前后指针，空间浪费更少
