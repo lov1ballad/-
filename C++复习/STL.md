@@ -108,4 +108,6 @@ stack和queue默认用deque，核心原因为：
 4.内存利用率高：相比list，deque不需要每个节点存前后指针，空间浪费更少
 
 # allocator
-allocator是STL中
+allocator是STL中负责内存管理的组建，核心作用是把容器的数据结构逻辑和底层内存操作解耦。
+有四个职责：
+1.分配原始内存allocate；2.释放内存deallocate；3.在已有内存上
