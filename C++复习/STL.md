@@ -78,12 +78,14 @@ list迭代器是双向迭代器，内部只封装了一个节点指针
 	4.红色节点的两个子节点必须是黑色
 	5.从任意节点到其所有后代叶子结点的路径中，黑色节点数量相等
 	
-map/multimap、set/multiset。底层红黑树，元素自动有序，操作Olog(n)
+map/multimap、set/multiset。**底层红黑树，元素自动有序，操作Olog(n)**
 map：键值对，键唯一。需要有序遍历或范围查询时用；
 set:只存键，自动去重排序。需要判断元素是否存在且要有序时使用；
 multimap/multiset：允许重复键
 # 无序容器
-	unordered_map/unordered_mutimap、unordered_set/unordered_,utiset。底层哈希表，无序，平均O(1)
+**底层哈希表，不保证顺序**
+unordered_map/unordered_mutimap：键值对，平均O(1)查找、插入。只需要快速查找不需要有序时用；
+unordered_set/unordered_,utiset：只存键，平均O(1)判断存在性
 
 # 容器适配器
 
