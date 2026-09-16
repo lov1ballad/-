@@ -121,3 +121,4 @@ deallocate(p, n):释放之前分配的内存，不调用析构函数
 ## 3.在已有内存上构造对象（construct）；
 construct(p,args...):在已分配的内存地址上用aplacement new构造对象
 ## 4.析构对象但不释放内存（destroy）
+destroy(p):调用对象的析构函数，但不释放内存
