@@ -106,3 +106,6 @@ stack和queue默认用deque，核心原因为：
 2.扩容开销小，deque扩容只需新增缓冲区，不搬移数据；
 3.两端操作效率高，queue需要push_back和popfront，deque两端都是O(1),vector头部操作是O(n);
 4.内存利用率高：相比list，deque不需要每个节点存前后指针，空间浪费更少
+
+# allocator
+allocator是STL中
