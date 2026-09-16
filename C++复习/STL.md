@@ -7,8 +7,8 @@
 		finish-start=size（）
 		end_of_storage指向已分配内存的末尾
 		end_of_storage-start=capacity()
-		连续内存，随机访问O(1)，未不插入均摊O(1)，中间插入O(n);
-		容量capacity≥大小size，扩容时通常按照2倍增长，旧数据被拷贝移动到新内存
+		连续内存，随机访问O(1)，尾部插入均摊O(1)，中间插入O(n);
+		容量capacity≥大小size，扩容时通常按照2倍（gcc是2倍，MSVC是1.5倍）增长，旧数据被拷贝（C++11移动）到新内存，释放旧内存，更新三个指针
 	2.
 关联容器
 	map/multimap、set/multiset。底层红黑树，元素自动有序，操作Olog(n)
