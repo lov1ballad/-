@@ -87,6 +87,16 @@ multimap/multiset：允许重复键
 unordered_map/unordered_mutimap：键值对，平均O(1)查找、插入。只需要快速查找不需要有序时用；
 unordered_set/unordered_,utiset：只存键，平均O(1)判断存在性
 
+| 需求场景         | 推荐容器          |
+| ------------ | ------------- |
+| 随机访问、尾部增删    | vector        |
+| 两端频繁增删       | deque         |
+| 中间频繁增删（已知位置） | list          |
+| 有序键值查找/范围查询  | map           |
+| 快速查找（不需要有序）  | unordered_map |
+| 去重+有序        | set           |
+| 去重+快速判断存在    | unordered_set |
+
 # 容器适配器
 
 stack、queue、priority_quieue。不是独立容器，是对底层容器的接口封装。
