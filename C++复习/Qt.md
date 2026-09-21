@@ -70,3 +70,9 @@ connect(sender, &Sender::valueChanged, receiver, &Receiver::onValueChanged);
 
 Model——View——Delegate，模型视图委托。是Qt框架中用于实现数据与界面分离的核心设计架构，本质是经典MVC模式在GUI场景下的演进——Qt将Controller的职责融入到Delegate中
 
+
+| 层级         | 职责                   | 典型类 |
+| ---------- | -------------------- | --- |
+| Model模型    | 管理数据、提供统一访问接口、通知数据变更 |     |
+| View视图     |                      |     |
+| Delegate委托 |                      |     |
