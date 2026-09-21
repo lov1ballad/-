@@ -92,3 +92,4 @@ MVD的三层组件通过信号与槽进行松耦合通信：
 1. 视觉渲染（paint）：通过重写paint函数，可以绘制进度条、复选框、图标文字等效果
 2. 编辑管理：通过createEditor、setEditorData、setModelData、updateEditorGeometry四件套，完整接管编辑生命周期
 3. 尺寸计算：告知视觉单元格应占据的宽高
+![[Pasted image 20260922005340.png]]
