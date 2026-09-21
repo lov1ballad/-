@@ -76,3 +76,12 @@ Model——View——Delegate，模型视图委托。是Qt框架中用于实现�
 | Model模型    | 管理数据、提供统一访问接口、通知数据变更    | QAbstractItemModel    |
 | View视图     | 负责布局、滚动、选择等界面框架，不直接操作数据 | QTableView、QListView  |
 | Delegate委托 | 负责单元格级别的绘制与编辑           | QAbstractItemDelegate |
+## MVD三者协作
+
+MVD的三层组件通过信号与槽进行松耦合通信：
+1. 数据变更——模型发信号——视图刷新
+		模型内部数据变化时，调用beginInsertRows()/endInsertRows等通知宏，发出dataChange、layoutChanged等信号，视图收到后执行局部刷新（不是全量重绘）
+2. 用户交互——视图发信号——委托介入
+		用户双击单元格时，视图触发编辑事件，委托接管编辑生命周期。
+3. 编辑完成——委托发信号——模型更新
+		委托通过createEditor创建编辑器、setEditorData载入数据、setModelData将修改回写模型。
