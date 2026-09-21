@@ -19,7 +19,6 @@ connect(sender, &Sender::valueChanged, receiver, &Receiver::onValueChanged);
 
 这种方式在**编译期**会通过QtPrivate::FunctionPointer提取函数签名，用static_assert做类型检查，参数不匹配直接编译报错。
 
-
 ## 3.运行时：信号触发与槽调用
 
 当执行emit valueChanged(42)时，实际调用的是moc生成的信号函数，最终进入QMetaObject::activate()；
