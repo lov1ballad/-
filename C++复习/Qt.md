@@ -16,15 +16,15 @@ Qt的信号槽机制是Qt框架最核心的特性，其本质是一套类型安�
 
 调用QObject::connect()时
 connect(sender, &Sender::valueChanged, receiver, &Receiver::onValueChanged);
-1. 提取信号和槽的索引：通过元对象系统查找信号和槽在各自类中的方法索引；
-2. 编译期类型检查：通过QtPrivate::FunctionPointer提取函数签名，用static_assert校验参数兼容性，参数不匹配直接编译报错；
-3. 创建Connection对象：QT内部QObjectPrivate::Connection对象，记录发送者、信号索引、接收者、槽索引、连接类型，并将这个对象加入到发送者的connectionLists(一个以信号索引为下标的数组，每个信号挂载一个链表)。
+1. **提取信号和槽的索引**：通过元对象系统查找信号和槽在各自类中的方法索引；
+2. **编译期类型检查**：通过**QtPrivate::FunctionPointer**提取函数签名，用static_assert校验参数兼容性，参数不匹配直接编译报错；
+3. **创建Connection对象**：QT内部QObjectPrivate::**Connection对象**，记录发送者、信号索引、接收者、槽索引、连接类型，并将这个对象加入到发送者的**connectionLists**(一个以信号索引为下标的数组，每个信号挂载一个链表)。
 
 ## 3.运行时：信号触发与槽调用
 
-当执行emit valueChanged(42)时，实际调用的是moc生成的信号函数，最终进入QMetaObject::activate()；
+当执行emit valueChanged(42)时，实际调用的是元对象编译器moc生成的信号函数，最终进入QMetaObject::activate()；
 ### 执行流程
-1. 根据信号索引从connectionLists中取出对应的连接链表；
+1. 根据**信号索引**从connectionLists中取出对应的连接链表；
 2. 遍历链表，对每个连接检查接收者是否存活、连接类型是什么；
 3. 根据连接类型决定调用方式：
 	....DirectConnection：在同一线程直接通过qt_metacall()同步调用槽函数，无堆分配，性能接近普通函数调用；
