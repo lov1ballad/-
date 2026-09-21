@@ -15,3 +15,12 @@ MOC(meta-object-compiler)作为预处理器，在编译前扫描头文件，为�
 ## 2.运行时：连接建立
 
 调用QObject::connect()时，QT内部会创建一个QObjectPrivate::Connection对象，记录发送者、信号索引、接收者、槽索引和连接类型，并将其加入发送者connectionLists(一个以信号索引为下标的稀疏数组，每个信号挂载一个连接链表)。
+connect(sender, &Sender::valueChanged, receiver, &Receiver::onValueChanged);
+
+这种方式在**编译期**会通过QtPrivate::FunctionPointer提取函数签名，用static_assert做类型检查，参数不匹配直接编译报错。
+
+
+## 3.运行时：信号触发与槽调用
+
+当执行emit valueChanged(42)时，实际调用的是moc生成的信号函数，最终进入QMetaObject::activate()；
+### 执行流程
