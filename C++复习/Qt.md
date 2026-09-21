@@ -64,3 +64,8 @@ connect(sender, &Sender::valueChanged, receiver, &Receiver::onValueChanged);
 3. 一对多/多对一：一个信号可以连接多个槽，多个信号也可以连接同一个槽；
 4. 线程安全：通过事件队列机制，天然支持跨线程通信（QueuedConnection）；
 5. 自动清理：当QObject被销毁时，与其相关的所有连接自动断开，避免野指针
+
+
+# Qt中的mvd
+
+Model——View——Delegate，是Qt
