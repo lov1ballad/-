@@ -27,4 +27,13 @@ connect(sender, &Sender::valueChanged, receiver, &Receiver::onValueChanged);
 1. 根据信号索引从connectionLists中取出对应的连接链表；
 2. 遍历链表，对每个连接检查接收者是否存活、连接类型是什么；
 3. 根据连接类型决定调用方式：
-DirectConnection：在同一线程直接通过qt_metacall()同步调用槽函数，无堆分配，性能接近普通函数调用；
+	....DirectConnection：在同一线程直接通过qt_metacall()同步调用槽函数，无堆分配，性能接近普通函数调用；
+	.....QueuedConnection:跨线程时，将信号参数深拷贝后封装为QMetaCallEvent，通过QCoreApplication::postEvent()投递到接收者线程的事件队列，由事件循环异步处理
+	....AutoConnection：默认参数，同线程等同于Direct，跨线程等同于Queued。
+	....BlockingQueuedConnection：跨线程时投递事件后阻塞原发送线程，直到槽函数执行完毕
+## 此设计思想的好处
+1. 松耦合：发送者不知道也不需要关心谁接收了信号，接收者也不知道信号来自哪里；
+2. 类型安全：信号与槽的参数签名必须兼容（槽的参数可以少于信号，多余的参数被忽略）；
+3. 一对多/多对一：一个信号可以连接多个槽，多个信号也可以连接同一个槽；
+4. 线程安全：通过事件队列机制，天然支持跨线程通信；
+5. 自动清理：当QObject被销毁时，与其相关的所有连接自动断开，避免野指针
