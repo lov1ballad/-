@@ -24,12 +24,12 @@ connect(sender, &Sender::valueChanged, receiver, &Receiver::onValueChanged);
 
 当执行emit valueChanged(42)时，实际调用的是元对象编译器moc生成的信号函数，最终进入QMetaObject::activate()；
 ### 执行流程
-1. 根据**信号索引**从connectionLists中取出对应的连接链表；
-2. 遍历链表，对每个连接检查接收者是否存活、连接类型是什么；
-3. 根据连接类型决定调用方式：
+1. 根据**信号索引**从**connectionLists**中取出对应的**连接链表**；
+2. **遍历链表**，对每个连接检查接收者是否存活、连接类型是什么；
+3. **根据连接类型决定调用方式**：
 	....DirectConnection：在同一线程直接通过qt_metacall()同步调用槽函数，无堆分配，性能接近普通函数调用；
 	
-	.....QueuedConnection:跨线程时，将信号参数深拷贝后封装为QMetaCallEvent，通过QCoreApplication::postEvent()投递到接收者所属线程的事件队列，由事件循环异步处理，目标线程的事件循环取出事件，在目标线程中执行槽函数
+	.....QueuedConnection:跨线程时，将信号参数深拷贝后封装为**QMetaCallEvent**，通过QCoreApplication::postEvent()投递到**接收者所属线程**的事件队列，由事件循环异步处理，目标线程的事件循环取出事件，在目标线程中执行槽函数
 	
 	....AutoConnection：默认参数，同线程等同于Direct，跨线程等同于Queued。
 	
