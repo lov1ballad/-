@@ -208,6 +208,11 @@ char arr[] = "hello"的sizeof是6，因为包含了'\0'，  char* ptr = “hello
 对于char arr[] = "hello"和char* ptr = “hello”来说，strlen都是5；
 
 char s[] = {'a', '\0', 'b', 'c'}的**sizeof是4**，**strlen是1**，碰到'\0'就停了，所以strlen只关心'\0'在哪儿
+现代C++直接使用.size（）来替代strlen；
+
+
+# 四种类型转换
+
 
 
 构造函数：
