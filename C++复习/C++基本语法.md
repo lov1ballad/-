@@ -139,6 +139,14 @@ const控制的是“能不能改”：把变量标记为只读，把指针/引�
 常量指针 (const int* 和int const* )：指针的指向可以改，指向的内容不能改；指针常量（int* const）
 
 ### 2.3 修饰引用
+const int&ref = x,表示不能通过ref修改x，常用于函数传参
+
+### 2.4 修饰成员函数
+承诺不修改对象的任何非mutable成员，const对象只能调用const成员函数
+
+
+**const 和 constexpr的区别**：const是运行时只读，初始值可以运行时才确定。constexpr更强，是编译期常量
+
 
 
 
