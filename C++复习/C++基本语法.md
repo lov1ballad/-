@@ -180,7 +180,10 @@ const int&ref = x,表示不能通过ref修改x，常用于函数传参
 
 现代C++一般用constexpr（常量表达式）来替代#define常量，若是#define宏函数，则使用inline函数替代。但是**条件编译、平台适配**还需要宏，无法被替代。constexpr可以声明编译期常量；声明函数、类构造函数。
 
-# auto、
+# auto和decltype
+
+**auto关键字**：类型推导：通过初始化表达式推导变量类型，只能用于变量声明，必须有初始化表达式，**剥离了const和引用**，
+如：const int&crx = x; auto y = crx;此时y不具有const和引用概念；
 
 
 构造函数：
