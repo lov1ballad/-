@@ -220,6 +220,33 @@ char s[] = {'a', '\0', 'b', 'c'}的**sizeof是4**，**strlen是1**，碰到'\0'�
 
 ## 2.dynamic_cast
 
+运行时转换；专用于有虚函数的继承体系中，做安全的向下转换，转换失败返回nullptr，引用转换失败抛std::bad_cast异常
+
+## 3.const_cast
+
+加或去const/volatile属性，不会改变类型本身
+
+```
+const int a = 10; 
+const int* p = &a;
+ int* q = const_cast<int*>(p);移除const
+```
+
+可以在const成员函数中调用非const成员函数
+```
+class Foo{
+public：
+	const std：：vector<int>& data() const{
+		return const_cast<Foo*>(this)->data();//复用非const版本
+		}
+	std::vector<int>& data(){return _data;}
+} 
+```
+
+## 4.reinterpret_cast
+将一块儿内存的比特位当另一种类型来读，用于指针和整数的互转
+
+
 构造函数：
 C++的构造函数主要有六种：默认构造、参数化构造、拷贝构造、移动构造、委托构造、继承构造
 核心的区别是出发诗句和资源处理方式不同：默认构造负责零初始化，拷贝构造复制资源，移动构造转移资源所有权，委托构造复用初始化逻辑，继承构造透传基类初始化。
