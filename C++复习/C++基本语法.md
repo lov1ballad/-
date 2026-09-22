@@ -204,7 +204,10 @@ const int&ref = x,表示不能通过ref修改x，常用于函数传参
 char arr[] = "hello"的sizeof是6，因为包含了'\0'，  char* ptr = “hello”的sizeof是8，因为ptr的类型为指针char*
 ```
 
+**strlen**只限用于字符串char*，char[],string等，是**运行期**执行
+对于char arr[] = "hello"和char* ptr = “hello”来说，strlen都是5；
 
+char s[] = {'a', '\0', 'b', 'c'}的**sizeof是4**，**strlen是1**，碰到'\0'就停了，所以strlen只关心'\0'在哪儿
 
 
 构造函数：
