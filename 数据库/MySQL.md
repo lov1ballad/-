@@ -96,3 +96,6 @@ CREATE TABLE——创建表关键字
 **show  tables**——查看已创建的表
 
 
+### 删除表
+
+**使用DDL语句删除表：DROP TABLE 表名**
