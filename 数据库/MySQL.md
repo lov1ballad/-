@@ -71,5 +71,6 @@ utf8—————————指定编码
 **show databases；**
 
 3. 查看数据库编码：
-
+**select schema_name,default_character_set_name from information_schema.schemata**
+ **where schema_name = 'test1';**
 
