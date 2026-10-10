@@ -93,5 +93,6 @@ CREATE TABLE——创建表关键字
 
 **使用DDL语句创建表：CREATE TABLE 表名（列名 类型，列名 类型，。。。）**
 
+show 
 
 
