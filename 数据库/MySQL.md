@@ -99,3 +99,9 @@ CREATE TABLE——创建表关键字
 ### 删除表
 
 **使用DDL语句删除表：DROP TABLE 表名**
+
+### 修改表
+
+1. **修改表名**： **ALTER TABLE 旧表名 RENAME 新表名**；
+2. 
+
