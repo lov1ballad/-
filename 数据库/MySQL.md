@@ -61,4 +61,9 @@
 
 CREATE DATABASE ——创建数据库关键字
 test—————————数据库名称
-DEFAU
+DEFAULT CHARACTER SET———指定默认编码类型关键字
+utf8—————————指定编码
+
+1. 使用DDL语句创建数据库：
+**CREATE DATABASE 数据库名 DEFAULT CHARACTER SET 字符编码**
+
