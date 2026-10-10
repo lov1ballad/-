@@ -108,4 +108,5 @@ navicat直接右键设计表，修改后保存；
 2. **修改列名： ALTER TABLE 表名 CHANGE COLUMN 旧列名 新列名 类型**；
 3. **修改列类型：ALTER TABLE 表名 MODIFY 列名 新类型**；
 4. **添加新列：ALTER TABLE 表名 ADD COLUMN 新列名 类型**；
+5. **删除指定列：ALTER TABLE 表名 DROP COLUMN 列名**；
 
