@@ -53,3 +53,12 @@
 1. COMMIT 提交事务
 2. ROLLBACK 回滚事务
 3. SAVEPOINT 设置回滚点
+
+
+## 创建与删除数据库
+
+### 创建数据库
+
+CREATE DATABASE ——创建数据库关键字
+test—————————数据库名称
+DEFAU
