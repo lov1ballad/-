@@ -104,4 +104,5 @@ CREATE TABLE——创建表关键字
 
 1. **修改表名**： **ALTER TABLE 旧表名 RENAME 新表名**；
 2. **修改列名： ALTER TABLE 表名 CHANGE COLUMN 旧列名 新列名 类型**；
+3. **修改列类型：ALTER TABLE 表名 MODIFY 列名 新类型**；
 
