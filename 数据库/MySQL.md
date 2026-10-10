@@ -80,3 +80,8 @@ DROP DATABASE——删除数据库关键字
 test————————数据库名称
 
 1. 使用DDL语言删除数据库：drop database 数据库名称；
+
+### 选择数据库
+
+use 数据库名；
+
