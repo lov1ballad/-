@@ -74,3 +74,9 @@ utf8—————————指定编码
 **select schema_name,default_character_set_name from information_schema.schemata**
  **where schema_name = 'test1';**
 
+### 删除数据库
+
+DROP DATABASE——删除数据库关键字
+test————————数据库名称
+
+1. 使用DDL语言删除数据库：drop database 数据库名称；
