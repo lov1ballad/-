@@ -67,3 +67,5 @@ utf8—————————指定编码
 1. 使用DDL语句创建数据库：
 **CREATE DATABASE 数据库名 DEFAULT CHARACTER SET 字符编码**
 
+2. 
+
