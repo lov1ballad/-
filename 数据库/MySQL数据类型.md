@@ -30,4 +30,24 @@ int(3)，表示显示长度为3，如果实际值是2，列指定了zerofill，�
 **char和varchar区别**：
 1. char长度固定，n为字符的总长度，每条数据占用等长字节空间，char(5)如果是a，则在a前面补齐4个空格；适用场景为手机号，身份证等；
 2. varchar可变长度，可以设置最大长度；varchar(5)如果是a，不会补齐空格；
-3. text不设置长度，不知道属性最大长度时适合用
+3. text不设置长度，不知道属性最大长度时适合用；
+**查询速度：char最快，varchar次之，text最慢。**
+
+**字符串适用建议：**
+1. 经常变化的字段使用varchar；
+2. 知道固定长度的用char
+3. 尽量用varchar
+4. 超过255字符的只能用varchar或text
+5. 能用varchar的地方不用text
+
+## 日期类型
+
+1. date：日期YYYY-MM-DD；
+2. time：时间HH:MM:SS
+3. datetime：日期时间YYYY-MM-DD HH:MM:SS；
+4. timestamp：时间戳YYYYMMDD HHMMSS
+时间戳相较于日期时间不考虑时区，1970年开始后的计时
+
+## 二进制数据BLOB
+
+1. 
