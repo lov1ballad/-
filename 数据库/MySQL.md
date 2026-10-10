@@ -25,3 +25,31 @@
 7. 在数据库中创建存储过程；
 8. 在数据库中创建视图；
 9. 设置表、存储过程和视图的权限
+
+## SQL语言分类
+
+### 数据查询语言DQL
+1. SELECT
+2. FROM
+3. WHERE
+4. ORDER BY
+5. HAVING
+
+### 数据操作语言DML  针对表中的数据
+1. INSERT 添加数据
+2. UPDATE 更新数据
+3. DELETE 删除数据
+
+### 数据定义语言DDL   针对数据库对象：库Database、表table、索引、index、视图view、存储过程procedure、触发器trigger
+1. CREATE 创建数据库对象
+2. ALTER 修改数据库对象
+3. DROP 删除数据库对象
+
+### 数据控制语言DCL
+1. GRANT 授权用户某种权限
+2. REVOKE 回收授予的某种权限
+
+### 事务控制语言TCL
+1. COMMIT 提交事务
+2. ROLLBACK 回滚事务
+3. SAVEPOINT 设置回滚点
