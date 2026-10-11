@@ -233,3 +233,6 @@ DML语言中在表名后不需要指定列名：**INSERT INFO 表名 VALUES(值1
 
 ### 默认值处理DEFAULT
 
+在MySQL中可以使用DEFAULT为列设定一个默认值。如果在插入数据时并未指定该列的值，那么MySQL会将默认值添加到该列中。
+
+**创建表时就可以指定列的默认值**：create table 表名(列名 类型 deafult 默认值,.....);
