@@ -170,6 +170,9 @@ DDL语句： **ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY(列名) R
 2. **允许为多个列添加唯一性约束；**
 3. **保证数据的唯一性**
 
+添加唯一性约束：
+ALTER TABLE 表名 ADD CONSTRAINT 约束名 UNIQUE(列名)
+
 
 ## 非空约束 Not Null
 
