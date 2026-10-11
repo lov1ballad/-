@@ -252,3 +252,9 @@ DML语言中在表名后不需要指定列名：**INSERT INTO 表名 VALUES(值1
 ==🔴注意：如果没有给定条件则会删除表中所有数据==；
 
 除过使用delete from不添加条件来清空表之外，也可以使用DML语句：**TRUNCATE TABLE 表名**
+
+### 清空表时delete和truncate区别
+1. truncate是整体删除（速度较快），delete是逐条删除（速度较慢）；
+2. truncate不写服务器日志log，delete写服务器日志log，也就是truncate效率比delete高的原因；
+3. truncate是会重置自增值的，delete不会重置，自增值依然累加。
+ 
