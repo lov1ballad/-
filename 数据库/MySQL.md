@@ -139,7 +139,11 @@ MySQL中的自动增长类型要求：
 2. 自动增长的列的类型必须是整数类型；
 3. 自动增长只能添加到具备主建约束与唯一性约束的列上；
 4. 删除主键约束或唯一性约束，如果该列拥有自动增长能力，则需要先去掉自动增长然后再删除约束；
-ALTER TABLE 表名 MODIFY 主键列名 类型 auto_increment；
+**主键设置自增**： **ALTER TABLE 表名 MODIFY 主键列名 类型 auto_increment**；
+
+**删除主键约束**：ALTER TABLE 表名 DROP PRIMARY KEY；
+==🔴注：删除主键时，如果主键具备自动增长能力，需要先去掉自动增长，然后再删除主键==
+
 
 
 ## 外键约束 Foreign KEY   （FK）
