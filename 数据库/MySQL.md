@@ -257,4 +257,15 @@ DML语言中在表名后不需要指定列名：**INSERT INTO 表名 VALUES(值1
 1. truncate是整体删除（速度较快），delete是逐条删除（速度较慢）；
 2. truncate不写服务器日志log，delete写服务器日志log，也就是truncate效率比delete高的原因；
 3. truncate是会重置自增值的，delete不会重置，自增值依然累加。
- 
+
+
+
+
+# MySQL查询数据DQL
+
+## SELECT基本查询
+
+**select语句从数据库中返回信息**。使用一个SELECT语句，可以完成下面操作：
+1. 列选择：能够使用select语句的列选择功能选择表中的列，返回列中的数据；
+2. 行选择：使用不同的标准限制看见的行；
+3. 连接：使用select语句的连接功能来集合被存储到不同表中的数据；
