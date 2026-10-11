@@ -161,6 +161,8 @@ eg：两个表，一个商品表一个订单表，商品表中的每个商品都
 **添加外键约束**：
 DDL语句： **ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY(列名) REFERENCES 参照的表名(参照的列名);**
 
+**删除外键约束**：
+**ALTER TABLE 表名 DROP FOREIGN KEY 约束名**；
 
 ## 唯一性约束Unique
 
