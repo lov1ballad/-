@@ -143,7 +143,7 @@ MySQL中的自动增长类型要求：
 
 **删除主键约束**：ALTER TABLE 表名 DROP PRIMARY KEY；
 ==🔴注：删除主键时，如果主键具备自动增长能力，需要先去掉自动增长，然后再删除主键==
-
+先去掉自动增长：alter table 表名 modify 主键列名 主键类型；
 
 
 ## 外键约束 Foreign KEY   （FK）
