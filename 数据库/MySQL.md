@@ -207,3 +207,6 @@ navicat中直接**添加索引**，类型选择unique即可
 **create table depts(department_id int primary key auto_increment,** 
 **department_name varchar(20) unique,** 
 **location_id int not null);**
+
+# MySQL数据操作DML
+
