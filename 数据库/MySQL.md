@@ -201,3 +201,9 @@ navicat中直接**添加索引**，类型选择unique即可
 
 **查询表中的约束信息**：**SHOW KEYS FROM 表名**
 
+一般会在创建表时添加主键、自动增长、唯一性约束、非空约束等。如果要创建外键约束必须保证外键的另外一个表存在。
+
+创建depts表包含department_id该列为**主键且自动增长**，department_name**不允许重复**，location_id列**不允许空值**；
+**create table depts(department_id int primary key auto_increment,** 
+**department_name varchar(20) unique,** 
+**location_id int not null);**
