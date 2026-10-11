@@ -131,7 +131,7 @@ navicat直接右键设计表，修改后保存；
 
 
 **添加主建约束：**
-使用DDL语句：  **ALTER TABLE 表名 ADD PRIMARY KEY（列名）**
+使用DDL语句：  **ALTER TABLE 表名 ADD PRIMARY KEY(列名）**
 
 **主键具备自动增长能力**（oricle没有此能力）
 MySQL中的自动增长类型要求：
@@ -143,7 +143,7 @@ MySQL中的自动增长类型要求：
 
 **删除主键约束**：ALTER TABLE 表名 DROP PRIMARY KEY；
 ==🔴注：删除主键时，如果主键具备自动增长能力，需要先去掉自动增长，然后再删除主键==
-先去掉自动增长：alter table 表名 modify 主键列名 主键类型；
+先去掉自动增长：**alter table 表名 modify 主键列名 主键类型**；
 
 
 ## 外键约束 Foreign KEY   （FK）
@@ -159,7 +159,8 @@ eg：两个表，一个商品表一个订单表，商品表中的每个商品都
 ![[Pasted image 20261011093544.png]]
 
 **添加外键约束**：
-DDL语句： 
+DDL语句： **ALTER TABLE 表名 ADD CONSTRAINT 约束名 FOREIGN KEY(列名) REFERENCES 参照的表名(参照的列名);**
+
 
 ## 唯一性约束Unique
 
