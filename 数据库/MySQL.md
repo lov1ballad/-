@@ -239,3 +239,8 @@ DML语言中在表名后不需要指定列名：**INSERT INTO 表名 VALUES(值1
 **新增列时也可以指定默认值**：alter table 表名 ADD column varchar(20) default "unknown";
 
 ==🔴注意：完全插入时对于设置了默认值的列数据必须使用default占位。==
+
+### 更新数据
+
+**UPDATE 表名 SET 列名=值，列名=值 WHERE 条件**；
+==🔴注意：更新语句中一定要给定更新条件，否则(不写where)表中的所有数据都会被更新==；
