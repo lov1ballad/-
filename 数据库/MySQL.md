@@ -250,3 +250,5 @@ DML语言中在表名后不需要指定列名：**INSERT INTO 表名 VALUES(值1
 
 **DELETE FROM 表名 WHERE 条件**；
 ==🔴注意：如果没有给定条件则会删除表中所有数据==；
+
+除过使用delete from不添加条件来清空表之外，也可以使用DML语句：**TRUNCATE TABLE 表名**
