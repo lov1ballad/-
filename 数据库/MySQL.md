@@ -185,10 +185,11 @@ navicat中直接**添加索引**，类型选择unique即可
 3. **允许为多个类添加非空约束；**
 4. **保证数据没有空值；**
 
-添加非空约束：
+**添加非空约束**：
 **ALTER TABLE 表名 MODIFY 列名 类型 NOT NULL**；
 
-
+删除非空约束：
+**ALTER TABLE 表名 MODIFY 列名 类型 NULL**；
 
 ## 检查约束 Check
 
