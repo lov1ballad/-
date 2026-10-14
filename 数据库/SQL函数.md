@@ -52,4 +52,18 @@ SQL函数有**输入参数**，并且**有且只有一个返回值**。
 | ------------------- | ---------- |
 | LOWER(s) 或 LCASE(s) | 将字符串s转换为小写 |
 | UPPER(s) 或 UCASE(s) | 将字符串s转换为大写 |
-![[Pasted image 20261014170559.png]]
+![[Pasted image 20261014170559.png]]![[Pasted image 20261014171055.png]]
+
+
+**字符处理函数：**
+
+
+| 函数                  | 描述                            |                                          |
+| ------------------- | ----------------------------- | ---------------------------------------- |
+| LENGTH(s)           | 返回字符串s的长度                     |                                          |
+| CONCAT(s1,s2....sn) | 字符串s1,s2等多个字符串合并为一个字符串        |                                          |
+| LPAD(s1,len,s2)     | 在字符串s1的开始处填充字符串s2，使字符串长度达到len | select lpad("oldlu",8,'x')------xxxoldlu |
+| LTRIM(s)            | 去掉字符串s开始处的空格                  | select ltrim("    oldlu")------oldlu     |
+| REPLACE(s,s1,s2)    | 将字符串s2替代字符串s中的字符串s1           | select ltrim("oldlu","o","O")------Oldlu |
+| REVERSE(s)          | 将字符串s的顺序反过来                   |                                          |
+| RPAD(s1,len,s2)     |                               |                                          |
