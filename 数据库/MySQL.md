@@ -288,3 +288,6 @@ DML语言中在表名后不需要指定列名：**INSERT INTO 表名 VALUES(值1
 | alias                | 给所选择的列不同的标题 |
 | FROM table           | 指定包含列的表     |
 
+![[Pasted image 20261014113818.png]]
+
+![[Pasted image 20261014113755.png]]
