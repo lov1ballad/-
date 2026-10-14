@@ -325,3 +325,8 @@ DML语言中在表名后不需要指定列名：**INSERT INTO 表名 VALUES(值1
 **表**别名：
 **SELECT 表别名.列名 FROM 表名 AS(可省略) 表别名；**
 
+
+### MySQL中去除重复
+
+![[Pasted image 20261014123424.png]]
+
