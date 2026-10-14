@@ -94,5 +94,15 @@ SQL函数有**输入参数**，并且**有且只有一个返回值**。
 | COUNT(expression) | 返回查询的记录总数                   |     |
 |                   |                             |     |
 
-ROUND（colunm|expression，n）函数
+**ROUND（colunm|expression，n）函数**
 	四舍五入列、表达式或者n位小数的值。如果第二个参数是0，或缺省，值被四舍五入为整数，如果第二个参数是2，则被四舍五入为两位小数。如果第二个参数是-2，值被四舍五入到小数点左边两位。
+![[Pasted image 20261014175740.png]]
+
+
+**TRUNCATE(colunm|expression,n)函数**
+	直接截断，参数意思和round一样。
+![[Pasted image 20261014180008.png]]
+
+
+**MOD(m,n)取余函数**
+	找出m除以n的余数；
