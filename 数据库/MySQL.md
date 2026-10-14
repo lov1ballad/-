@@ -330,3 +330,4 @@ DML语言中在表名后不需要指定列名：**INSERT INTO 表名 VALUES(值1
 
 ![[Pasted image 20261014123424.png]]
 
+**除去相同行**关键字：**DISTINCT**
