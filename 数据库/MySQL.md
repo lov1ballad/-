@@ -407,3 +407,9 @@ and是并且，or表示或，not表示取反
 3. SELECT子句；投影哪些列，定位列
 4. ORDER BY子句；执行排序
 
+可以进行**多列排序**，比如值相同的列则用另一列辅助排序，比如下面例子，用department升序排，如果department相同则用salary降序排；
+![[Pasted image 20261014160330.png]]
+
+
+==🔴注意：按某列来排序也可以不用select显示该列。==
+
