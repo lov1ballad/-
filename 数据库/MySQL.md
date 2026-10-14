@@ -353,3 +353,14 @@ DML语言中在表名后不需要指定列名：**INSERT INTO 表名 VALUES(值1
 
 !=也表示不等于；
 
+![[Pasted image 20261014152315.png]]
+
+
+
+**查找范围区间**用between and。
+
+![[Pasted image 20261014152415.png]]包含上下限。
+
+
+**查找符合指定条件列表（集合）中的值**：
+![[Pasted image 20261014152650.png]]
