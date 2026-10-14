@@ -71,3 +71,6 @@ SQL函数有**输入参数**，并且**有且只有一个返回值**。
 | SUBSTR(s,start,length)    | 从字符串s的start位置截取长度为length的子字符串     |                                          |
 | SUBSTRING(s,start，length) | 从字符串s的start位置截取长度为length的子字符串     |                                          |
 | TRIM(s)                   | 去掉开头和结尾的空格                        |                                          |
+| INSTR(s,s1)               | 返回s1在s中出现的第一次的位置                  |                                          |
+
+![[Pasted image 20261014173310.png]]
