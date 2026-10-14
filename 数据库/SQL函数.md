@@ -66,4 +66,5 @@ SQL函数有**输入参数**，并且**有且只有一个返回值**。
 | LTRIM(s)            | 去掉字符串s开始处的空格                  | select ltrim("    oldlu")------oldlu     |
 | REPLACE(s,s1,s2)    | 将字符串s2替代字符串s中的字符串s1           | select ltrim("oldlu","o","O")------Oldlu |
 | REVERSE(s)          | 将字符串s的顺序反过来                   |                                          |
-| RPAD(s1,len,s2)     |                               |                                          |
+| RPAD(s1,len,s2)     | 在s1的结尾处添加字符串s2，使字符串s1的长度达到len |                                          |
+|                     |                               |                                          |
