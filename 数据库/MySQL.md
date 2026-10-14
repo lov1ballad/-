@@ -379,3 +379,13 @@ DML语言中在表名后不需要指定列名：**INSERT INTO 表名 VALUES(值1
 NULL条件，包含IS NULL条件和IS NOT NULL条件。
 
 IS NULL条件用于空值测试。空值的意思是难以获得的、未指定的、未知的或不适用的。
+
+
+
+### MySQL中的逻辑条件
+
+![[Pasted image 20261014153739.png]]
+
+and是并且，or表示或，not表示取反
+**多条件之间的逻辑关系**
+
