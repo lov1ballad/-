@@ -211,6 +211,3 @@ MySQL无法自动转换的。需要依赖转换函数。
 | case expressiong when condition1 then result1 when condition2 then result2.....when conditionN then resultN  else result end | case表示函数开始，end表示结束。如果condition1成立，则返回result1，如果2成立返回result2，全部不成立则返回result，当一个成立后，后面的不执行 | ![[Pasted image 20261015121951.png]] |
 |                                                                                                                              |                                                                                          |                                      |
 
-
-练习：
-![[Pasted image 20261015130007.png]]
