@@ -491,7 +491,12 @@ employees表中既包含员工数据也包含经理数据，可以通过manager_
 ![[Pasted image 20261015171455.png]]
 
 语法：
-1.select 查询列表；
-2.from 表 别名；
-3.inner join 链接表；
-4.on 连接条件
+**1.select 查询列表；**
+**2.from 表 别名；**
+**3.inner join 链接表（放在from中的两个表之间）；**
+**4.on 连接条件**
+
+**用ON子句指定连接条件**：
+
+
+![[Pasted image 20261015194541.png]]
