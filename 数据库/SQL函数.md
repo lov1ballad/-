@@ -201,10 +201,12 @@ MySQL无法自动转换的。需要依赖转换函数。
 ## 通用函数
 
 
-| 函数名                 | 描述                        | 示例                                   |
-| ------------------- | ------------------------- | ------------------------------------ |
-| IF(expr,v1,v2)      | 如果表达式expr成立，则返回v1，否则返回v2  | ![[Pasted image 20261015120826.png]] |
-| IFNULL(v1,v2)       | 如果v1的值不为null，则返回v1，否则返回v2 | ![[Pasted image 20261015120916.png]] |
-| ISNULL(expression)  |                           |                                      |
-| NULLIF(expr1,expr2) |                           |                                      |
-|                     |                           |                                      |
+| 函数名                                                                                                                          | 描述                                                                                       | 示例                                   |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ------------------------------------ |
+| IF(expr,v1,v2)                                                                                                               | 如果表达式expr成立，则返回v1，否则返回v2                                                                 | ![[Pasted image 20261015120826.png]] |
+| IFNULL(v1,v2)                                                                                                                | 如果v1的值不为null，则返回v1，否则返回v2                                                                | ![[Pasted image 20261015120916.png]] |
+| ISNULL(expression)                                                                                                           | 判断expr是否为空，是空返回true                                                                      | ![[Pasted image 20261015121320.png]] |
+| NULLIF(expr1,expr2)                                                                                                          | 比较两个参数是否相同，相同返回null，否则返回expr1                                                            | ![[Pasted image 20261015121417.png]] |
+| coalesce(expr1,expr2....expr_n)                                                                                              | 返回参数中的第一个非空表达式(从左向右)                                                                     | ![[Pasted image 20261015121634.png]] |
+| case expressiong when condition1 then result1 when condition2 then result2.....when conditionN then resultN  else result end | case表示函数开始，end表示结束。如果condition1成立，则返回result1，如果2成立返回result2，全部不成立则返回result，当一个成立后，后面的不执行 |                                      |
+|                                                                                                                              |                                                                                          |                                      |
