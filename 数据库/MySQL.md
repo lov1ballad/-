@@ -500,3 +500,7 @@ employees表中既包含员工数据也包含经理数据，可以通过manager_
 
 
 ![[Pasted image 20261015194541.png]]
+
+
+**用ON指定更多连接条件**：
+![[Pasted image 20261015194902.png]]
