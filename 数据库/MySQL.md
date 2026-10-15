@@ -453,3 +453,6 @@ and是并且，or表示或，not表示取反
 ![[Pasted image 20261015152547.png]]
 **使用表别名**：
 ![[Pasted image 20261015152811.png]]
+
+**多表连接**：
+![[Pasted image 20261015152943.png]]
