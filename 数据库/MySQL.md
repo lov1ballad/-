@@ -543,3 +543,9 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 **UNION**：可以将两个查询结果集合并，返回的行都是唯一的，如同对整个结果集合使用distinct
 **UNION ALL**：相较于上面UNION是包含了重复数据的。
+
+
+# 多表查询练习：
+![[Pasted image 20261016162721.png]]
+**分析**：
+来源于两张表，等值连接即可，employees表中的所有雇员都有department_id
