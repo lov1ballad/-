@@ -556,4 +556,5 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 此题按照部门3来查询：
 
-**分析**：
+**分析**：唯一列表就要使用distinct关键字，部门的地点在loctions表中，所以是三表查询
+
