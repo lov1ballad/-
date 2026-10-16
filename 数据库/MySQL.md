@@ -548,4 +548,9 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 # 多表查询练习：
 ![[Pasted image 20261016162721.png]]
 **分析**：
-来源于两张表，等值连接即可，employees表中的所有雇员都有department_id
+来源于两张表，等值连接即可，employees表中的所有雇员都有department_id，==🔴如果存在员工没有department_id，需要考虑用左外连接查询==。
+![[Pasted image 20261016163059.png]]
+
+
+![[Pasted image 20261016163107.png]]
+
