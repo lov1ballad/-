@@ -561,4 +561,10 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 ![[Pasted image 20261016163848.png]]
 
 
-![[Pasted image 20261016163855.png]]**分析**：三表查询
+![[Pasted image 20261016163855.png]]**分析**：三表查询，用is not null 来判断佣金有无
+![[Pasted image 20261016164643.png]]
+
+
+![[Pasted image 20261016164711.png]]
+
+**分析**：两表查询，用like过滤条件
