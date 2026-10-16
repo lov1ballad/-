@@ -247,4 +247,6 @@ MySQL无法自动转换的。需要依赖转换函数。
 COUNT函数的三种格式：
 1. COUNT(* )：返回表中满足SELECT语句的所有列的行数，包括重复行，包括有空值列的行；
 2. COUNT(expr)：返回在列中的由EXPR指定的非空值的数；
-3. COUNT(distinct expr)：返回在列中的由expr指定的唯一
+3. COUNT(**distinct** expr)：返回在列中的由expr指定的唯一非空值的数；
+
+![[Pasted image 20261016230535.png]]
