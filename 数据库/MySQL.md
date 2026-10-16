@@ -554,3 +554,6 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 ![[Pasted image 20261016163107.png]]
 
+此题按照部门3来查询：
+
+**分析**：
