@@ -531,4 +531,15 @@ employees去连接departments，并且左外连接：
 
 
 **右外连接**：
-RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]
+RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id为连接条件查询，因为employees表中的department_id只有1-6，而departments表中department_id是1-20，因此多了14条孤儿数据。![[Pasted image 20261016161740.png]]
+
+
+
+**全外连接**：FULL OUTER JOIN连接（MySQL不支持FULL OUTER JOIN可以使用union实现）
+除了返回满足连接条件的数据外，还会将两个表的孤儿数据都显示出来
+![[Pasted image 20261016162000.png]]
+
+
+
+**UNION**：可以将两个查询结果集合并，返回的行都是唯一的，如同对整个结果集合使用distinct
+**UNION ALL**：相较于上面UNION是包含了重复数据的。
