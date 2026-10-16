@@ -526,3 +526,6 @@ employees去连接departments，并且左外连接：
 其中以department_id列为连接条件，下面使用左外连接时会将employees表中的department_id列为空的行也显示出来。
 
 ![[Pasted image 20261016161014.png]]
+
+
+
