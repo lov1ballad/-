@@ -558,3 +558,7 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 **分析**：唯一列表就要使用distinct关键字，部门的地点在loctions表中，所以是三表查询
 
+![[Pasted image 20261016163848.png]]
+
+
+![[Pasted image 20261016163855.png]]**分析**：
