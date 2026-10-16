@@ -547,7 +547,7 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 # 多表查询练习：
 ![[Pasted image 20261016162721.png]]
-**分析**：
+**分析**：![[Pasted image 20261016163059.png]]
 来源于两张表，等值连接即可，employees表中的所有雇员都有department_id，==🔴如果存在员工没有department_id，需要考虑用左外连接查询==。
 ![[Pasted image 20261016163059.png]]
 
@@ -568,3 +568,11 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 ![[Pasted image 20261016164711.png]]
 
 **分析**：两表查询，用like过滤条件
+
+![[Pasted image 20261016165143.png]]
+
+
+![[Pasted image 20261016165159.png]]
+
+**分析**：内连接用sql99的inner join on，三表查询
+
