@@ -516,6 +516,7 @@ employees表中既包含员工数据也包含经理数据，可以通过manager_
 
 
 **左外连接**：左边的表中即使没有与目标表中的匹配行，该查询也会取出左表中的行。
+**左表名 LEFT OUTER JOIN 右表名**
 ![[Pasted image 20261016160223.png]]
 
 employees去连接departments，并且左外连接：
@@ -529,3 +530,5 @@ employees去连接departments，并且左外连接：
 
 
 
+**右外连接**：
+RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]
