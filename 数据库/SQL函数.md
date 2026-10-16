@@ -250,3 +250,10 @@ COUNT函数的三种格式：
 3. COUNT(**distinct** expr)：返回在列中的由expr指定的唯一非空值的数；
 
 ![[Pasted image 20261016230535.png]]
+
+**组函数和NULL值**：
+
+### 在组函数中使用IFNULL函数
+
+**对有佣金的雇员进行平均佣金计算**
+SELECT AVG(**IFUNLL**(comission_pct,0)) from employyes;
