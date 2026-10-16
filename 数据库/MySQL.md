@@ -576,3 +576,8 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 **分析**：内连接用sql99的inner join on，三表查询
 
+![[Pasted image 20261016165706.png]]
+
+
+![[Pasted image 20261016165716.png]]
+**分析**：经理和雇员在一个表中，使用自连接查询
