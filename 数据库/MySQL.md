@@ -561,4 +561,4 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 ![[Pasted image 20261016163848.png]]
 
 
-![[Pasted image 20261016163855.png]]**分析**：
+![[Pasted image 20261016163855.png]]**分析**：三表查询
