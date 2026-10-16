@@ -513,8 +513,16 @@ employees表中既包含员工数据也包含经理数据，可以通过manager_
 
 **孤儿数据**：指被连接的列的值为空的数据（外连接中不匹配的数据）；
 
-**左外连接**：
+
+
+**左外连接**：左边的表中即使没有与目标表中的匹配行，该查询也会取出左表中的行。
 ![[Pasted image 20261016160223.png]]
 
 employees去连接departments，并且左外连接：
 ![[Pasted image 20261016160251.png]]
+
+对比：
+正常内连接：![[Pasted image 20261016160853.png]]
+其中以department_id列为连接条件，下面使用左外连接时会将employees表中的department_id列为空的行也显示出来。
+
+![[Pasted image 20261016161014.png]]
