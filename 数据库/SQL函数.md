@@ -339,3 +339,4 @@ HAVING子句是对查询出结果集分组后的结果进行过滤。
 
 
 ![[Pasted image 20261018162739.png]]
+![[Pasted image 20261018163602.png]]
