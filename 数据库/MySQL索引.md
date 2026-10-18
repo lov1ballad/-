@@ -45,4 +45,6 @@
 
 **直接创建索引**：**CREATE INDEX** index_name **ON** **表名**(**列名**(length));
 
-修改表添加索引：ALTER TABLE 表名 ADD INDEX 索引名 （column(length));
+**修改表添加索引**：**ALTER TABLE** 表名 **ADD INDEX** 索引名(列名(length));
+
+**创建表时就指定索引列**：**CREATE TABLE** 表名(列名 类型，列名 类型， **INDEX** 索引名(列名(length)))
