@@ -63,3 +63,5 @@
 
 
 **创建唯一索引**：**CREATE UNIQUE INDEX** 索引名 **ON** 表名(列名(length))；
+
+**修改表添加唯一索引**：**ALTER TABLE** 表名 **ADD UNIQUE** 索引名(列名(length));
