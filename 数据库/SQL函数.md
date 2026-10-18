@@ -257,3 +257,16 @@ COUNT函数的三种格式：
 
 **对有佣金的雇员进行平均佣金计算**
 SELECT AVG(**IFUNLL**(comission_pct,0)) from employyes;
+
+
+
+## 数据分组（GROUP BY）
+
+聚合函数的基础，如果不做数据分组的话，聚合函数会处理整个表
+
+![[Pasted image 20261018152702.png]]
+
+需求分析：1.每个部门（数据分组，按照部门id分组）；2.平均薪水（AVG函数）；
+
+GROUP BY 后面添加分组条件
+
