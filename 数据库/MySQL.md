@@ -678,4 +678,7 @@ not like 应该改为 <>或者!=
 
 ![[Pasted image 20261018185208.png]]
 **分析：首先是多表查询，连接条件以deptID连接，子查询depts表的loctionID，主查询根据location找到部门和员工相关数据**
+![[Pasted image 20261018191102.png]]
+
+此题由于要显示两个表中的数据，用自然连接最好查找JOIN
 
