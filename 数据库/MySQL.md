@@ -618,3 +618,13 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 ![[Pasted image 20261018180608.png]]
 
+外查询的条件可以继续通过and连接
+
+### 多行子查询
+
+
+![[Pasted image 20261018180805.png]]
+
+
+
+对多行子查询要使用多行运算符而不是单行运算符。
