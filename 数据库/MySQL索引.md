@@ -65,3 +65,27 @@
 **创建唯一索引**：**CREATE UNIQUE INDEX** 索引名 **ON** 表名(列名(length))；
 
 **修改表添加唯一索引**：**ALTER TABLE** 表名 **ADD UNIQUE** 索引名(列名(length));
+
+**创建表时指定唯一索引**：**CREATE TABLE** 表名(列名 类型，列名 类型， UNIQUE 索引名(**列名**(length)))
+
+
+
+## 主键索引
+
+一个表只能有一个主键，不允许空值。一般是在建表的时候同时创建主键索引。
+
+**修改表添加主键索引**：**ALTER TABLE** 表名 **ADD PRIMARY KEY**(列名);（同向表中添加主键约束）
+
+**创建表时指定主键索引**：**CREATE TABLE** 表名(列名 类型，列名 类型， **PRIMARY KEY**(**列名**))
+
+
+
+## 组合索引
+
+组合索引是指使用**多个字段**创建的索引，只有在**查询条件**中使用了创建索引时的**第一个字段**，索引才会被使用（最左前缀原则）
+
+**最左前缀原则**：如果使用name，address，salary创建组合索引，那么想要组合索引生效，只能使用如下组合：name/address/salary；  name/address； name/，如果使用address/salary或salary则索引不生效。
+
+
+**添加组合索引**：ALTER TABLE 表名 ADD INDEX 索引名(column(length),colunm(length));
+
