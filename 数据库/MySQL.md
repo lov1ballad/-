@@ -682,3 +682,9 @@ not like 应该改为 <>或者!=
 
 此题由于要显示两个表中的数据，用自然连接最好查找JOIN
 
+![[Pasted image 20261018191309.png]]
+
+
+![[Pasted image 20261018191340.png]]
+
+**分析：manage_id是king的员工，子查询找king的employee_id，主查询找manager_id**
