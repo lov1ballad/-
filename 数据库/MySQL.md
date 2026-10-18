@@ -614,5 +614,7 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 ### 单行子查询
 
-![[Pasted image 20261018170221.png]]**子查询返回一行的查询**
+![[Pasted image 20261018170221.png]]**子查询返回一行的查询**，不能是多个列，如果子查询出多条数据，那么就不能用单行比较符，当然也不属于单行子查询。
+
+![[Pasted image 20261018180608.png]]
 
