@@ -288,3 +288,6 @@ GROUP BY 后面添加分组条件**子句必须包含列**；（必须在where�
 ### 在都列上使用分组
 ![[Pasted image 20261018154242.png]]
 先按照department_id分组，再在department_id分组的基础上，再按照job_id进行分组，所以形成department_id多行重复值的现象。**相同部分相同职位的总薪资**。
+
+每个部门不同工作岗位的员工总数：
+![[Pasted image 20261018154741.png]]
