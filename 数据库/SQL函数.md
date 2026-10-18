@@ -273,7 +273,9 @@ SELECT AVG(**IFUNLL**(comission_pct,0)) from employyes;
 
 ![[Pasted image 20261018153151.png]]
 
-GROUP BY 后面添加分组条件（必须在where、from后，在order by前）
+GROUP BY 后面添加分组条件**子句必须包含列**；（必须在where、from后，在order by前）
+
+==🔴注意：使用where子句，可以在划分行成组前过滤行==
 
 ![[Pasted image 20261018153041.png]]
 
