@@ -659,8 +659,10 @@ not like 应该改为 <>或者!=
 
 ![[Pasted image 20261018183919.png]]
 
-**分析：子查询平均薪水**，或者直接where e.salay > avg(e.salary)
+**分析：子查询平均薪水**
 
 ![[Pasted image 20261018184112.png]]
 
 
+==🔴注意：where e.salay > avg(e.salary)为什么不行？==
+![[Pasted image 20261018184502.png]]
