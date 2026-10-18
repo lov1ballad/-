@@ -666,3 +666,8 @@ not like 应该改为 <>或者!=
 
 ==🔴注意：where e.salay > avg(e.salary)为什么不行？==
 ![[Pasted image 20261018184502.png]]
+
+
+![[Pasted image 20261018184549.png]]
+
+分析：子查询中以部分id分组，查询u的部门
