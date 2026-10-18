@@ -89,3 +89,8 @@
 
 **添加组合索引**：ALTER TABLE 表名 ADD INDEX 索引名(column(length),colunm(length));
 
+**创建表时创建组合索引**：**CREATE TABLE** 表名(列名 类型，列名 类型， **INDEX** 索引名(**列名**(length)，列名(length)))；
+
+## 索引的底层原理
+
+核心是**InnoDB默认用B+树**来组织数据，再配合二级索引、页结构和缓冲池一起工作。
