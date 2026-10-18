@@ -327,3 +327,10 @@ HAVING子句是对查询出结果集分组后的结果进行过滤。
 ![[Pasted image 20261018160809.png]]
 分析：需要去重，有相同经理，计数去重不能直接在select子句后添加 distinct，要在count函数中添加
 ![[Pasted image 20261018160944.png]]
+
+
+![[Pasted image 20261018162139.png]]
+![[Pasted image 20261018162224.png]]
+
+
+![[Pasted image 20261018162235.png]]
