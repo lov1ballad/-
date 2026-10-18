@@ -624,7 +624,8 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 
 ![[Pasted image 20261018180805.png]]
-
-
+ANY：比如返回了12、20、30，那么可以28小于30，那么28满足any小于{12,20,30}，ALL的话必须都小于。
 
 对多行子查询要使用多行运算符而不是单行运算符。
+
+#### ANY:
