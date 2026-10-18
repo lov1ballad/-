@@ -43,4 +43,4 @@
 
 **查询索引**：**SHOW INDEX FROM** table_name；
 
-**直接创建索引**：**CREATE INDEX** index_name **ON** **table**(**column**(length));
+**直接创建索引**：**CREATE INDEX** index_name **ON** **表名**(**列名**(length));
