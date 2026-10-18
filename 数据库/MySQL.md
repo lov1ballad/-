@@ -688,3 +688,8 @@ not like 应该改为 <>或者!=
 ![[Pasted image 20261018191340.png]]
 
 **分析：manage_id是king的员工，子查询找king的employee_id，主查询找manager_id**
+
+可以直接Join
+![[Pasted image 20261018191641.png]]
+
+也可以子查询：
