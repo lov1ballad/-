@@ -318,3 +318,6 @@ HAVING子句是对查询出结果集分组后的结果进行过滤。
 ## 函数练习
 
 ![[Pasted image 20261018160225.png]]
+![[Pasted image 20261018160421.png]]
+
+![[Pasted image 20261018160428.png]]
