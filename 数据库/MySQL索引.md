@@ -44,3 +44,5 @@
 **查询索引**：**SHOW INDEX FROM** table_name；
 
 **直接创建索引**：**CREATE INDEX** index_name **ON** **表名**(**列名**(length));
+
+修改表添加索引：ALTER TABLE 表名 ADD INDEX 索引名 （column(length));
