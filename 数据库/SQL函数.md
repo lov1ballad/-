@@ -321,3 +321,9 @@ HAVING子句是对查询出结果集分组后的结果进行过滤。
 ![[Pasted image 20261018160421.png]]
 
 ![[Pasted image 20261018160428.png]]
+![[Pasted image 20261018160736.png]]
+
+
+![[Pasted image 20261018160809.png]]
+分析：需要去重，有相同经理
+![[Pasted image 20261018160944.png]]
