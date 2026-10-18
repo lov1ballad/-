@@ -300,7 +300,12 @@ GROUP BY 后面添加分组条件**子句必须包含列**；（必须在where�
 
 **HAVING子句**
 
+使用前提是使用group by分组后。
+
 HAVING子句是对查询出结果集分组后的结果进行过滤。
 
-==🔴注意：where子句约束选择的行，having子句约束组==
+==🔴注意：where子句约束选择的行，having子句约束组，having子句必须出现在group by子句后面==
+
+求最大薪水大于1w的部门：
+![[Pasted image 20261018155523.png]]
 
