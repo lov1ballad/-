@@ -609,3 +609,4 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 ![[Pasted image 20261018164624.png]]
 
 ![[Pasted image 20261018164641.png]]
+![[Pasted image 20261018164917.png]]
