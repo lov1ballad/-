@@ -268,5 +268,13 @@ SELECT AVG(**IFUNLL**(comission_pct,0)) from employyes;
 
 需求分析：1.每个部门（数据分组，按照部门id分组）；2.平均薪水（AVG函数）；
 
-GROUP BY 后面添加分组条件
+### 创建数据组
+在没有进行数据分组之前，所有聚合函数将结果集作为一个大的信息组进行处理。但是有时需要将表的信息划分为较小的组，需要用group by
+
+![[Pasted image 20261018153151.png]]
+
+GROUP BY 后面添加分组条件（必须在where、from后，在order by前）
+
+![[Pasted image 20261018153041.png]]
+
 
