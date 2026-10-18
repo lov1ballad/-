@@ -610,3 +610,9 @@ RIGHT OUTER JOIN![[Pasted image 20261016161446.png]]右外连接以department_id
 
 ![[Pasted image 20261018164641.png]]
 ![[Pasted image 20261018164917.png]]
+
+
+### 单行子查询
+
+![[Pasted image 20261018170221.png]]**子查询返回一行的查询**
+
