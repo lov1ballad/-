@@ -693,3 +693,8 @@ not like 应该改为 <>或者!=
 ![[Pasted image 20261018191641.png]]
 
 也可以子查询：
+![[Pasted image 20261018192059.png]]
+
+
+![[Pasted image 20261018192115.png]]
+分析：先子查询找部门
