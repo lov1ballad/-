@@ -20,8 +20,12 @@
 # 使用事务
 
 
-| TCL语句             | 描述   |
-| ----------------- | ---- |
-| start transaction | 事务开启 |
-| commit            | 事务提交 |
-| rollback          | 事务回滚 |
+| TCL语句                 | 描述   |
+| --------------------- | ---- |
+| **start transaction** | 事务开启 |
+| **commit**            | 事务提交 |
+| **rollback**          | 事务回滚 |
+
+
+示例：
+![[Pasted image 20261019105927.png]]
