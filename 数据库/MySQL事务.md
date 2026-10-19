@@ -91,5 +91,6 @@ A事务读取B事务**尚未提交的数据**，此时如果**B事务发生错�
 ![[Pasted image 20261019115659.png]]
 
 
-### 设置事务隔离级别
+### 设置事务隔离级别（对当前session有效）
 
+**set session transaction isolation level （四选一read uncommitted/read committed/repetable read/serializable）**
