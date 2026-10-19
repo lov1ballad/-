@@ -80,4 +80,11 @@ A事务读取B事务**尚未提交的数据**，此时如果**B事务发生错�
 **事物的隔离级别用于决定如何控制并发用户读写数据的操作**。
 
 事务的隔离级别从低到高依次为：
-1. 
+1. READ UNCOMMITTED；
+2. READ COMMITTED；
+3. REPEATABLE READ；
+4. SERIALIZABLE
+
+**隔离级别越低，越能支持高并发的数据库操作**。
+
+![[Pasted image 20261019115432.png]]
