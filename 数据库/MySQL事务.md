@@ -45,4 +45,4 @@
 
 ![[Pasted image 20261019110421.png]]
 
-
+![[Pasted image 20261019112103.png]]
