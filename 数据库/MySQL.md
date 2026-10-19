@@ -721,3 +721,6 @@ not like 应该改为 <>或者!=
 ### LIMIT OFFSET子句
 
 **SELECT** 列 **FROM** 表 **WHERE** 条件 **ORDER BY LIMIT** 查询数量 **OFFSET** 开始位置；
+![[Pasted image 20261019125725.png]]
+
+![[Pasted image 20261019125752.png]]
