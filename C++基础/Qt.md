@@ -76,7 +76,23 @@ connect(sender, &Sender::valueChanged, receiver, &Receiver::onValueChanged);
 	4.高度自定义：可以通过自定义Delegate委托来精确控制每个单元格的绘制方式和编辑行为
 eg:播控软件的素材库可以用QListView+QAbstractItemModel(树形数据)
 
-QAbstractTableModel
+自定义Model通常需要继承：QAbstractItemModel(树形数据)、QAbstractTableModel表格数据、QAbstractListModel列表数据。
+
+QModelIndex 的内部结构：
+![[Pasted image 20261020143711.png]]
+![[Pasted image 20261020143747.png]]
+
+
+
+
+无论继承哪个基类，都需要重写以下函数：
+ 1. rowCount（）：返回指定parent下的行数或子节点数；
+ 2. columnCount（）：返回列数；
+ 3. data（）：根据传入的QModelIndex和角色Role返回对应数据。必须处理Qt::DisplayRole（显示文本）、Qt::EditRole（编辑数据）等常用角色；
+ 4. index（）：根据行、列和parent创建一个有效的QModelIndex；
+ 5. parent（）：对于树形Model，需要返回父节点的index；对于表格和列表Model，直接返回无效的QModelIndex（）即可；
+ 6. setData（）：设置指定index的数据，并返回是否成功；
+ 7. flags（）：返回单元格的标志位，必须包含Qt::ItemIsEditable才能编辑
 
 # Qt中的mvd
 
