@@ -81,8 +81,8 @@ eg:播控软件的素材库可以用QListView+QAbstractItemModel(树形数据)
 QModelIndex 的内部结构：
 ![[Pasted image 20261020143711.png]]
 ![[Pasted image 20261020143747.png]]
-
-
+###  internalPointer 的核心用途
+![[Pasted image 20261020144016.png]]
 
 
 无论继承哪个基类，都需要重写以下函数：
