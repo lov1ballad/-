@@ -65,6 +65,18 @@ connect(sender, &Sender::valueChanged, receiver, &Receiver::onValueChanged);
 4. 线程安全：通过事件队列机制，天然支持跨线程通信（QueuedConnection）；
 5. 自动清理：当QObject被销毁时，与其相关的所有连接自动断开，避免野指针
 
+# Model/View
+
+传统的控件如QListWIdget之类将数据结构和UI显示紧密耦合在一起，数据直接存储在控件内部。而Qt的Model/VIew架构的核心就是将数据和显示彻底分离：Model只负责数据的存储和管理，VIew只负责数据的展示和用户交互。
+
+优势：
+	1.一对多绑定，一个Model可以同时绑定多个VIew，同一份数据可以用表格、列表、图表等多种方式同时展示，且数据自动同步；
+	2.数据源解耦：可以自定义Model来适配各种底层数据源，而且不需要修改VIew代码；
+	3.**大数据懒加载**：Model支持按需获取数据，不会因为数据量大而导致UI卡顿；
+	4.高度自定义：可以通过自定义Delegate委托来精确控制每个单元格的绘制方式和编辑行为
+eg:播控软件的素材库可以用QListView+QAbstractItemModel(树形数据)
+
+QAbstractTableModel
 
 # Qt中的mvd
 
