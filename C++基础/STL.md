@@ -22,6 +22,8 @@ end_of_storage-start=capacity()
 1.尾部操作：push_back、emplace_back（原地构造避免临时对象）、pop_back
 ==🔴emplace_back利用的就是完美转发：把传入的参数通过 `std::forward<Args>(args)...` 原封不动地转发出去，保留左值/右值属性，最后调用**placement new**；==
 
+==🟠在**模板函数**中对**转发引用参数**使用 `std::forward`，为什么不直接转发引用参数？因为会丢失右值属性，导致移动语义无法触发==
+
 2.中间插入/删除操作（O(n)需移动元素）：insert（pos，val）、
 insert（pos、count、val）、insert（pos，{a,b,c}）
 erase(pos)删除单个元素、erase(start,end)
