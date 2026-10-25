@@ -3,9 +3,9 @@ vector动态数组、deque分段数组、list双向链表、forward_list单向�
 
 ## 1.vector 本质是动态数组，内部通过三个指针管理
 ![[Pasted image 20260916113753.png]]
-start指向已分配内存的起始位置；finish指向最后一个元素的下一个位置；
+**start指向已分配内存的起始位置**；**finish指向最后一个元素的下一个位置**；
 finish-start=size（）
-end_of_storage指向已分配内存的末尾
+**end_of_storage指向已分配内存的末尾**
 end_of_storage-start=capacity()
 连续内存，随机访问O(1)，尾部插入均摊O(1)，中间插入O(n);
 ![[Pasted image 20260916115907.png]]
