@@ -89,9 +89,14 @@ QModelIndex 的内部结构：
  1. rowCount（）：返回指定parent下的行数或子节点数；
  2. columnCount（）：返回列数；
  3. data（）：根据传入的QModelIndex和角色Role返回对应数据。必须处理Qt::DisplayRole（显示文本）、Qt::EditRole（编辑数据）等常用角色；
+![[Pasted image 20261025161432.png]]
+
+
  4. index（）：根据行、列和parent创建一个有效的QModelIndex；
  5. parent（）：对于树形Model，需要返回父节点的index；对于表格和列表Model，直接返回无效的QModelIndex（）即可；
  6. setData（）：设置指定index的数据，并返回是否成功；
+![[Pasted image 20261025161508.png]]
+
  7. flags（）：返回单元格的标志位，必须包含Qt::ItemIsEditable才能编辑
 
 # Qt中的mvd
