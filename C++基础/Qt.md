@@ -15,14 +15,14 @@ Qt自带的代码生成工具，在常规编译前扫描头文件，生成包含
 
 ## 2.元对象系统的核心功能
 
-1. 运行时类型识别
-2. 动态属性系统setProperty
-3. 动态方法调用，Q_INVOKABLE ，QMetaObject::inockeMethod
-4. 不依赖平台
+1. **运行时类型识别**
+2. **动态属性系统setProperty**
+3. **动态方法调用**，Q_INVOKABLE ，QMetaObject::inockeMethod
+4. **不依赖平台**
 
 # Qt的信号槽实现原理
 
-Qt的信号槽机制是Qt框架最核心的特性，其本质是一套类型安全的观察者模式，通过元对象系统（meta-object-system）实现对象间的松耦合通信。
+Qt的信号槽机制是Qt框架最核心的特性，其本质是一套类型安全的观察者模式，通过元对象系统（meta-object-system）实现对象间的**松耦合通信**。
 完整实现分为三个阶段：
 ## 1.编译期：moc代码生成
 
