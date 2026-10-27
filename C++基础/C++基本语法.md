@@ -439,7 +439,20 @@ class Singleton
 ```
 **C++11标准明确规定，局部静态变量的初始化过程是线程安全的**。如果多个线程首次调用该函数，初始化操作会被正确序列化，只有一个线程会执行初始化，其他线程会等待。
 对于生命周期的管理，由于是静态局部变量，生命周期是整个程序运行期间。
-
+```
+class Single
+{
+private：Single(){};
+		Single(const Single&)=delete;
+		Single& operator=(const Single&)=delete;
+public:
+		static Single& getInstance()
+		{
+			static Singel instance;
+			return instance;
+		}
+}
+```
 单例模式缺点：
 1.由于是全局状态，会导致单元测试困难，全局状态难隔离
 2.违反单一职责，既管业务又管自己生命周期
